@@ -78,8 +78,8 @@ public class NotificationsFragment extends Fragment {
     private void launchNotif1() {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(), "1")
                 .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("Titulo")
-                .setContentText("Esto es un titulo de una notificación de una aplicación android")
+                .setContentTitle("Notificacion 1")
+                .setContentText("Tienes una nueva notificacion")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         Notification noif = builder.build();
 
@@ -91,7 +91,7 @@ public class NotificationsFragment extends Fragment {
     private void launchNotif2() {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(), "1")
                 .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("Titulo")
+                .setContentTitle("Notificacion 2")
                 .setContentText("Texto Corto")
                 .setStyle(new NotificationCompat.BigTextStyle()
                         .bigText("Esto es un titulo de una notificación de una aplicación android. Esto es un titulo de una notificación de una aplicación android. \n \n Esto es un titulo de una notificación de una aplicación android."))
@@ -111,9 +111,9 @@ public class NotificationsFragment extends Fragment {
         PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, intent, 0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(), "1")
-                .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("Titulo")
-                .setContentText("Clicka aqui anda...")
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setContentTitle("Notificacion 3")
+                .setContentText("Clicka aqui para accerder ")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
@@ -132,9 +132,9 @@ public class NotificationsFragment extends Fragment {
         PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, intent, 0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(), "1")
-                .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("Titulo")
-                .setContentText("Clicka aqui anda...")
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setContentTitle("Notificacion 4")
+                .setContentText("Esta notificacion no hace nada")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true);;
 
