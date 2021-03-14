@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <LinearLayout
+
+        android:id="@+id/act_login_lnlayoutV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".LoginActivity">
+
+        <!-- TextView for heading -->
+        <TextView
+            android:id="@+id/act_login_txtLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_Login"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <!-- Edit text for email -->
+
+        <!-- Edit text for password -->
+        <EditText
+            android:id="@+id/act_login_editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txt_intruduceEmail"
+            android:inputType="textEmailAddress"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/act_login_editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_introduce_pass"
+            android:inputType="textPassword"
+            android:autofillHints="" />
+
+        <!-- Button for Login with text "Login" -->
+        <Button
+            android:id="@+id/btn_login_act_login_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtbtn_Login" />
+
+        <!-- ProgressBar for Loading Time -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

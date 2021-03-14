@@ -5,4 +5,8 @@
     <string name="txt_pasword">Contraseña</string>
     <string name="btn_text_Login">Inicia Sesion</string>
     <string name="btn_text_register">Siguiente</string>
+    <string name="txt_Login">Login</string>
+    <string name="txt_intruduceEmail">Introduce Email</string>
+    <string name="txt_introduce_pass">Introduce Contraseña</string>
+    <string name="txtbtn_Login">IniciarSesion</string>
 </resources>
