@@ -4,6 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main.NotificationsFragment$MainActivity">
 
+    <FrameLayout
+        android:id="@+id/act_main_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Color_main_background"
+        app:layout_constraintBottom_toTopOf="@+id/act_main_imagebtns_linH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566" />
+
+    <LinearLayout
+        android:id="@+id/act_main_imagebtns_linH"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/Color_butons"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/act_main_imgbtn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:background="@color/Color_butons"
+            android:contentDescription="@string/imgbtn_home"
+            app:srcCompat="@drawable/casa__1_" />
+
+        <ImageButton
+            android:id="@+id/act_main_imgbtn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:background="@color/Color_butons"
+            android:contentDescription="@string/imgbtn_search"
+            app:srcCompat="@drawable/lupa__2_" />
+
+        <ImageButton
+            android:id="@+id/act_main_imgbtn_notificaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:background="@color/Color_butons"
+            android:contentDescription="@string/imgbtn_notificacion"
+            app:srcCompat="@drawable/notificacion__1_" />
+
+        <ImageButton
+            android:id="@+id/act_main_imgbtn_user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:backgroundTint="@color/Color_butons"
+            android:contentDescription="@string/imgbtn_user"
+            app:srcCompat="@drawable/usuario__1_" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

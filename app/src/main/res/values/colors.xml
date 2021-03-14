@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorImageButton">#777575</color>
+    <color name="Color_register">#474646</color>
+    <color name="colorBigBtnsBackground">#000000</color>
+    <color name="ColorBackground">#000000</color>
+    <color name="Color_BackGrounds">#9B9B9B</color>
+    <color name="TextColor">#FFFFFF</color>
+    <color name="color_title">#474B4E</color>
+    <color name="Color_text">#FFFFFF</color>
+    <color name="Color_butons">#FFFFFF</color>
+    <color name="Colortext">#70FF88</color>
+    <color name="ColorTextBtn">#000000</color>
+    <color name="Color_main_background">#FFFFFF</color>
 </resources>

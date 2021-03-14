@@ -9,4 +9,8 @@
     <string name="txt_intruduceEmail">Introduce Email</string>
     <string name="txt_introduce_pass">Introduce Contraseña</string>
     <string name="txtbtn_Login">IniciarSesion</string>
+    <string name="imgbtn_home" />
+    <string name="imgbtn_search" />
+    <string name="imgbtn_notificacion" />
+    <string name="imgbtn_user" />
 </resources>
