@@ -1,4 +1,4 @@
-package com.alejandroquindimil.proyectorecpm;
+package com.alejandroquindimil.proyectorecpm.login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +10,14 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Button;
 
+import com.alejandroquindimil.proyectorecpm.MainActivity;
+import com.alejandroquindimil.proyectorecpm.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-
-import android.os.Bundle;
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.alejandroquindimil.proyectorecpm;
+package com.alejandroquindimil.proyectorecpm.login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.alejandroquindimil.proyectorecpm.MainActivity;
+import com.alejandroquindimil.proyectorecpm.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
@@ -54,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void changetoLogin() {
-        Intent intent= new Intent(RegisterActivity.this,LoginActivity.class);
+        Intent intent= new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
 
     }
@@ -85,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             progressbar.setVisibility(View.GONE);
 
-                            Intent intent= new Intent(RegisterActivity.this,MainActivity.class);
+                            Intent intent= new Intent(RegisterActivity.this, MainActivity.class);
                             startActivity(intent);
 
                         }else {
