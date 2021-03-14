@@ -22,7 +22,7 @@ import com.google.android.gms.tasks.Task;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText emailTextView, passwordTextView;
-    private Button Btn;
+    private Button Btniniciar, Btnregistar;
     private ProgressBar progressbar;
     private FirebaseAuth mAuth;
 
@@ -35,16 +35,30 @@ public class LoginActivity extends AppCompatActivity {
 
         emailTextView = findViewById(R.id.act_login_editTextEmail);
         passwordTextView = findViewById(R.id.act_login_editTextPassword);
-        Btn = findViewById(R.id.btn_login_act_login_);
+        Btniniciar = findViewById(R.id.btn_login_act_login_);
+        Btnregistar = findViewById(R.id.btn_register_act_login);
         progressbar = findViewById(R.id.progressBar);
 
-        Btn.setOnClickListener(new View.OnClickListener() {
+        Btniniciar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 loginUserAccount();
             }
         });
+
+        Btnregistar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changetoRegister();
+            }
+        });
+
+
+    }
+
+    private void changetoRegister() {
+        Intent intent= new Intent(LoginActivity.this, RegisterActivity.class);
+        startActivity(intent);
 
     }
 
@@ -106,4 +120,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         });
     }
+
+
+
 }
