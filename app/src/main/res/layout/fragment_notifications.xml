@@ -37,14 +37,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/frg_notif_notify1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/btn_notification_1" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/frg_notif_notify2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
