@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "397160675681",
+    "project_id": "proyectorecpm2021",
+    "storage_bucket": "proyectorecpm2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397160675681:android:755389debd4bef9e71ed20",
+        "android_client_info": {
+          "package_name": "com.alejandroquindimil.proyectorecpm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397160675681-2g9a5psq3k8r6p6n106q2d9afin01i5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBkHJzA14X7iZ2WtWso_D_oHS6IEUnPGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397160675681-2g9a5psq3k8r6p6n106q2d9afin01i5g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
