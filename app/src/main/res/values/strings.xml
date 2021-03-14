@@ -25,4 +25,6 @@
     <string name="txt_username">Nombre usuario</string>
     <string name="text_email">Email</string>
     <string name="frg_user_btn_edit">Editar Usuario</string>
+    <string name="txt_notacount">No tienes cuenta registrate?</string>
+    <string name="btn_register">Registrate</string>
 </resources>
