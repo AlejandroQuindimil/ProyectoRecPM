@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Color_BackGrounds"
     tools:context=".login.RegisterActivity">
 
     <LinearLayout
@@ -22,9 +23,13 @@
             android:id="@+id/act_register_txt_registro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/Colortext"
             android:text="@string/txt_register"
             android:textAlignment="center"
-            android:textSize="36sp" />
+            android:textAllCaps="true"
+            android:textColor="@color/ColorTextBtn"
+            android:textSize="36sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/act_register_editTextEmail"

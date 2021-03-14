@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Color_BackGrounds"
     tools:context=".login.LoginActivity">
 
     <LinearLayout
@@ -27,9 +28,13 @@
             android:id="@+id/act_login_txtLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/Colortext"
             android:text="@string/txt_Login"
             android:textAlignment="center"
-            android:textSize="36sp" />
+            android:textAllCaps="true"
+            android:textColor="@color/ColorTextBtn"
+            android:textSize="36sp"
+            android:textStyle="bold" />
 
         <!-- Edit text for email -->
 
@@ -38,18 +43,20 @@
             android:id="@+id/act_login_editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/txt_intruduceEmail"
             android:inputType="textEmailAddress"
-            android:autofillHints="" />
+            android:textColor="@color/Color_text" />
 
         <EditText
             android:id="@+id/act_login_editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:hint="@string/txt_introduce_pass"
             android:inputType="textPassword"
-            android:autofillHints="" />
+            android:textColor="@color/Color_text" />
 
         <!-- Button for Login with text "Login" -->
         <Button
