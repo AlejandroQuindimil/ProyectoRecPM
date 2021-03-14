@@ -3,6 +3,8 @@ package com.alejandroquindimil.proyectorecpm.main;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,11 +20,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.alejandroquindimil.proyectorecpm.MainActivity;
 import com.alejandroquindimil.proyectorecpm.R;
+
+import static android.app.Notification.EXTRA_NOTIFICATION_ID;
 
 public class NotificationsFragment extends Fragment {
 
-    private Button btn1,btn2;
+    private Button btn1,btn2,btn3,btn4;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -35,6 +40,8 @@ public class NotificationsFragment extends Fragment {
     private void initViews(View v) {
         btn1 = v.findViewById(R.id.frg_notif_notify1);
         btn2 = v.findViewById(R.id.frg_notif_notify2);
+        btn3 = v.findViewById(R.id.frg_notif_notify3);
+        btn4 = v.findViewById(R.id.frg_notif_notify4);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +51,7 @@ public class NotificationsFragment extends Fragment {
 
 
         });
+
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +59,19 @@ public class NotificationsFragment extends Fragment {
             }
         });
 
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchNotif3();
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchNotif4();
+            }
+        });
 
     }
 
@@ -82,6 +103,48 @@ public class NotificationsFragment extends Fragment {
         notificationManager.notify(2, noif);
     }
 
+    private void launchNotif3() {
+
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        intent.putExtra("DO_LOGOUT", true);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, intent, 0);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(), "1")
+                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setContentTitle("Titulo")
+                .setContentText("Clicka aqui anda...")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true);
+        Notification noif = builder.build();
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getActivity());
+
+        notificationManager.notify(3, noif);
+    }
+
+    private void launchNotif4() {
+
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        intent.putExtra("DO_LOGOUT", true);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, intent, 0);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(), "1")
+                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setContentTitle("Titulo")
+                .setContentText("Clicka aqui anda...")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setAutoCancel(true);;
+
+        Notification noif = builder.build();
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getActivity());
+
+        notificationManager.notify(3, noif);
+
+    }
 
     private void createNotificationChannel() {
 
