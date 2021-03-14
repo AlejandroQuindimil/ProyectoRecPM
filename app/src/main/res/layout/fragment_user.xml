@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fr_user_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.UserFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/frg_user_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/frg_user_text_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Colortext"
+                android:text="@string/frg_title_user"
+                android:textColor="@color/ColorTextBtn"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frg_user_imgName_lin"
+            android:layout_width="340dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/frg_user_title"
+            app:layout_constraintTop_toBottomOf="@+id/frg_user_title">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/usuario__1_" />
+
+            <TextView
+                android:id="@+id/frg_user_tView_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/User_name"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frg_user_info_lin"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/frg_user_imgName_lin"
+            app:layout_constraintStart_toStartOf="@+id/frg_user_imgName_lin"
+            app:layout_constraintTop_toBottomOf="@+id/frg_user_imgName_lin">
+
+            <TextView
+                android:id="@+id/frg-user_name_tviem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/txt_username"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/frg_user_email_tView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/text_email"
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/frg_user_btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/frg_user_btn_edit"
+            app:layout_constraintEnd_toEndOf="@+id/frg_user_info_lin"
+            app:layout_constraintTop_toBottomOf="@+id/frg_user_info_lin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -6,9 +6,27 @@
     tools:context=".main.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/frg_home_text_lnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/frg_notifications_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/Colortext"
+            android:text="@string/txt_home"
+            android:textColor="@color/ColorTextBtn"
+            android:textSize="30sp" />
+    </LinearLayout>
 
 </FrameLayout>
