@@ -27,4 +27,6 @@
     <string name="frg_user_btn_edit">Editar Usuario</string>
     <string name="txt_notacount">No tienes cuenta registrate?</string>
     <string name="btn_register">Registrate</string>
+    <string name="btn_notificacion3">Notificacion3</string>
+    <string name="btn_notificacion4">Notificacion4</string>
 </resources>
