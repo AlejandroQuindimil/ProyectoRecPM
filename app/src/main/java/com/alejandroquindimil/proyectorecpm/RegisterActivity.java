@@ -67,12 +67,12 @@ public class RegisterActivity extends AppCompatActivity {
                             Intent intent= new Intent(RegisterActivity.this,MainActivity.class);
                             startActivity(intent);
 
-                        }else{
+                        }else {
                             Toast.makeText(getApplicationContext(),
                                     "Fallo al registrar", Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
 
         }
     }
-}
