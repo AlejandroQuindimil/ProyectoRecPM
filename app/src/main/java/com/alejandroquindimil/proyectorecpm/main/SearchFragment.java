@@ -46,6 +46,7 @@ public class SearchFragment extends Fragment {
             public void click(Aplicacion item, int position) {
                 //
                 personas.clear();
+
                 for (int idx = 0; idx < 100; idx++) {
                     personas.add(new Aplicacion(1+idx, "Aplicacion"));
                 }
