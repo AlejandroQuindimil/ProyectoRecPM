@@ -97,5 +97,15 @@
             android:textColor="@color/ColorTextBtn"
             app:layout_constraintEnd_toEndOf="@+id/frg_user_info_lin"
             app:layout_constraintTop_toBottomOf="@+id/frg_user_info_lin" />
+
+        <Button
+            android:id="@+id/frg_userbtn_logOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/btnLogout"
+            android:textColor="@color/ColorTextBtn"
+            app:layout_constraintEnd_toEndOf="@+id/frg_user_btn_edit"
+            app:layout_constraintTop_toBottomOf="@+id/frg_user_btn_edit" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

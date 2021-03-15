@@ -32,4 +32,5 @@
     <string name="txt_welcome">Bienvenida</string>
     <string name="Img_user" />
     <string name="imgn_home" />
+    <string name="btnLogout">Cerrar sesion</string>
 </resources>
