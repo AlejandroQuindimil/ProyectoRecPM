@@ -65,7 +65,8 @@
             android:id="@+id/btn_login_act_login_"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txtbtn_Login" />
+            android:text="@string/txtbtn_Login"
+            android:textColor="@color/ColorTextBtn" />
 
         <!-- ProgressBar for Loading Time -->
         <ProgressBar
@@ -94,7 +95,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_register" />
+                android:text="@string/btn_register"
+                android:textColor="@color/ColorTextBtn" />
         </LinearLayout>
     </LinearLayout>
 

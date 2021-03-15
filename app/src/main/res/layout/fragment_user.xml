@@ -94,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/frg_user_btn_edit"
+            android:textColor="@color/ColorTextBtn"
             app:layout_constraintEnd_toEndOf="@+id/frg_user_info_lin"
             app:layout_constraintTop_toBottomOf="@+id/frg_user_info_lin" />
     </androidx.constraintlayout.widget.ConstraintLayout>
