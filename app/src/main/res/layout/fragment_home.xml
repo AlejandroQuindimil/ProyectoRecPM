@@ -45,6 +45,7 @@
                 android:id="@+id/act_main_imgHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/imgn_home"
                 android:src="@drawable/social_appstore_app_13" />
 
             <TextView
