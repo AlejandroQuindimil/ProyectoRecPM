@@ -15,9 +15,7 @@ import com.alejandroquindimil.proyectorecpm.login.RegisterActivity;
 public class UserFragment extends Fragment {
     
     private Button btnLogout,btnEditar;
-    
-    
-    
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,8 +50,6 @@ public class UserFragment extends Fragment {
         startActivity(intent);
         getActivity().finish();
     }
-   
-
 
     private void initViews(View v) {
         btnLogout= v.findViewById(R.id.frg_userbtn_logOut);

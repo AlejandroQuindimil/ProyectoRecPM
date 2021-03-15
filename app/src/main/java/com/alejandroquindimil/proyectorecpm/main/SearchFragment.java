@@ -27,12 +27,10 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_search, container, false);
 
-        initButtons(v);
         initData(v);
         return v;}
 
-    private void initButtons(View v) {
-    }
+
 
     private void initData(View v) {
         RecyclerView contenedor =v.findViewById(R.id.frg_search_recyclerview);
