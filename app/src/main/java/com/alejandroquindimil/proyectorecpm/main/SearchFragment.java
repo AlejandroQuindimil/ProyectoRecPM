@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alejandroquindimil.proyectorecpm.R;
+import com.alejandroquindimil.proyectorecpm.listeners.AplicacionAdapter;
+import com.alejandroquindimil.proyectorecpm.listeners.AplicacionAdapterListener;
+import com.alejandroquindimil.proyectorecpm.modelos.Aplicacion;
 
 import java.util.ArrayList;
 import java.util.List;

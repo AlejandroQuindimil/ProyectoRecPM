@@ -1,4 +1,4 @@
-package com.alejandroquindimil.proyectorecpm.main;
+package com.alejandroquindimil.proyectorecpm.listeners;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alejandroquindimil.proyectorecpm.R;
+import com.alejandroquindimil.proyectorecpm.modelos.Aplicacion;
 
 import java.util.ArrayList;
 import java.util.List;

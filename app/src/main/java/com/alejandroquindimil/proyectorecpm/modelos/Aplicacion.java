@@ -1,4 +1,4 @@
-package com.alejandroquindimil.proyectorecpm.main;
+package com.alejandroquindimil.proyectorecpm.modelos;
 
 import java.io.Serializable;
 

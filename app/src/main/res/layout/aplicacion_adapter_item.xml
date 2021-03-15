@@ -5,7 +5,7 @@
     android:id="@+id/aplicacion_adapter_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".main.AplicacionAdapter">
+    tools:context=".listeners.AplicacionAdapter">
 
     <LinearLayout
         android:id="@+id/aplicacion_lnlyaout_H"
