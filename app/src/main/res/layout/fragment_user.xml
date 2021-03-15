@@ -43,18 +43,10 @@
             <ImageView
                 android:id="@+id/frg_user_img_user"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="144dp"
                 android:contentDescription="@string/Img_user"
                 android:src="@drawable/usuario__1_" />
 
-            <TextView
-                android:id="@+id/frg_user_tView_userName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/User_name"
-                android:textAlignment="center"
-                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,6 +58,15 @@
             app:layout_constraintEnd_toEndOf="@+id/frg_user_imgName_lin"
             app:layout_constraintStart_toStartOf="@+id/frg_user_imgName_lin"
             app:layout_constraintTop_toBottomOf="@+id/frg_user_imgName_lin">
+
+            <TextView
+                android:id="@+id/frg_user_tView_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/User_name"
+                android:textAlignment="center"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/frg-user_name_tviem"

@@ -34,7 +34,7 @@
         <LinearLayout
             android:id="@+id/frg_home_lnlLayoutV"
             android:layout_width="368dp"
-            android:layout_height="624dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="@+id/frg_home_text_lnlayout"
             app:layout_constraintHorizontal_bias="0.488"
@@ -48,16 +48,21 @@
                 android:contentDescription="@string/imgn_home"
                 android:src="@drawable/social_appstore_app_13" />
 
-            <TextView
-                android:id="@+id/frg_home_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_welcome"
-                android:textAlignment="center"
-                android:textColor="@color/ColorTextBtn"
-                android:textSize="24sp"
-                android:textStyle="bold" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/frg_home_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_welcome"
+            android:textAlignment="center"
+            android:textColor="@color/ColorTextBtn"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/frg_home_lnlLayoutV"
+            app:layout_constraintStart_toStartOf="@+id/frg_home_lnlLayoutV"
+            app:layout_constraintTop_toBottomOf="@+id/frg_home_lnlLayoutV" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

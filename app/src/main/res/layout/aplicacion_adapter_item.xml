@@ -22,6 +22,7 @@
             android:layout_height="156dp"
             android:layout_marginTop="4dp"
             android:layout_weight="1"
+            android:contentDescription="@string/txt_contentDescription"
             app:srcCompat="@drawable/android" />
 
         <TextView
@@ -31,7 +32,6 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="TextView"
             android:textColor="@color/ColorTextBtn"
             android:textSize="24sp" />
     </LinearLayout>
