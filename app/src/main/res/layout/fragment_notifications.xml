@@ -45,14 +45,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_notification_1" />
+                android:text="@string/btn_notification_1"
+                android:textColor="@color/ColorTextBtn" />
 
             <Button
                 android:id="@+id/frg_notif_notify2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_notification_2" />
+                android:text="@string/btn_notification_2"
+                android:textColor="@color/ColorTextBtn" />
 
         </LinearLayout>
 
@@ -71,14 +73,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_notificacion3" />
+                android:text="@string/btn_notificacion3"
+                android:textColor="@color/ColorTextBtn" />
 
             <Button
                 android:id="@+id/frg_notif_notify4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_notificacion4" />
+                android:text="@string/btn_notificacion4"
+                android:textColor="@color/ColorTextBtn" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
