@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alejandroquindimil.proyectorecpm.R;
@@ -65,12 +66,13 @@ public class AplicacionAdapter extends RecyclerView.Adapter<AplicacionAdapter.Ap
     public class AplicacionHolder extends RecyclerView.ViewHolder {
        public TextView txt;
        public ImageView icon;
-
-        public ConstraintLayout linRoot;
+       public LinearLayout Lnlay;
+       public ConstraintLayout linRoot;
 
         void initView(View v){
             txt = v.findViewById(R.id.aplicacion_adapter_txt);
             icon = v.findViewById(R.id.aplicacion_adapter_img);
+            Lnlay= v.findViewById(R.id.aplicacion_lnlyaout_H);
             linRoot = v.findViewById(R.id.aplicacion_adapter_root);
         }
 

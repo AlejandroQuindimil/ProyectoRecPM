@@ -47,7 +47,7 @@ public class SearchFragment extends Fragment {
                 //
                 personas.clear();
                 for (int idx = 0; idx < 100; idx++) {
-                    personas.add(new Aplicacion(1+idx, "Pulpo"));
+                    personas.add(new Aplicacion(1+idx, "Aplicacion"));
                 }
 
                 AplicacionAdapter adaptador = new AplicacionAdapter(ctx, personas,  null);
@@ -59,7 +59,7 @@ public class SearchFragment extends Fragment {
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(ctx);
         LinearLayoutManager manager = new LinearLayoutManager(ctx, LinearLayoutManager.HORIZONTAL, false);
-        GridLayoutManager gridManager = new GridLayoutManager(ctx, 3);
+        GridLayoutManager gridManager = new GridLayoutManager(ctx, 1);
 
 
         contenedor.setLayoutManager(gridManager);
