@@ -35,28 +35,28 @@ public class SearchFragment extends Fragment {
         RecyclerView contenedor =v.findViewById(R.id.frg_search_recyclerview);
         Activity ctx = getActivity();
 
-        List<Aplicacion> personas = new ArrayList<>();
+        List<Aplicacion> aplicacion = new ArrayList<>();
+
 
         for (int idx = 0; idx < 100; idx++) {
-            personas.add(new Aplicacion(1+idx));
+            aplicacion.add(new Aplicacion(1+idx));
         }
 
         final AplicacionAdapterListener listener = new AplicacionAdapterListener() {
             @Override
             public void click(Aplicacion item, int position) {
                 //
-                personas.clear();
+                aplicacion.clear();
 
                 for (int idx = 0; idx < 100; idx++) {
-                    personas.add(new Aplicacion(1+idx, "Aplicacion"));
+                    aplicacion.add(new Aplicacion(1+idx, "Aplicacion"));
                 }
 
-                AplicacionAdapter adaptador = new AplicacionAdapter(ctx, personas,  null);
+                AplicacionAdapter adaptador = new AplicacionAdapter(ctx, aplicacion,  null);
                 contenedor.setAdapter(adaptador);
 
             }
         };
-
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(ctx);
         LinearLayoutManager manager = new LinearLayoutManager(ctx, LinearLayoutManager.HORIZONTAL, false);
@@ -65,7 +65,7 @@ public class SearchFragment extends Fragment {
 
         contenedor.setLayoutManager(gridManager);
 
-        AplicacionAdapter adaptador = new AplicacionAdapter(ctx, personas, listener);
+        AplicacionAdapter adaptador = new AplicacionAdapter(ctx, aplicacion, listener);
         contenedor.setAdapter(adaptador);
 
 
