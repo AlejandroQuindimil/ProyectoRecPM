@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +30,15 @@
             android:textColor="@color/ColorTextBtn"
             android:textSize="36sp"
             android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/act_register_editTest_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/User_name"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/act_register_editTextEmail"
