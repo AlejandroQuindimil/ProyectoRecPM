@@ -34,4 +34,6 @@
     <string name="btnLogout">Cerrar sesion</string>
     <string name="txt_contentDescription" />
     <string name="txtRpass">Repite contraseña</string>
+    <string name="error_profile_not_exist">Usuario no existe</string>
+    <string name="sharedpreferences_file">ficheroConfiguracion</string>
 </resources>
