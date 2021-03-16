@@ -6,20 +6,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 
 import com.alejandroquindimil.proyectorecpm.R;
 import com.alejandroquindimil.proyectorecpm.login.RegisterActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class UserFragment extends Fragment {
     
     private Button btnLogout,btnEditar;
+    private EditText Usuario, Userrname, Email;
+
+    private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        mAuth= FirebaseAuth.getInstance();
         View v = inflater.inflate(R.layout.fragment_user, container, false);
+
         initViews(v);
         initListeners();
         
@@ -42,6 +51,7 @@ public class UserFragment extends Fragment {
     }
 
     private void editProfile() {
+
     }
 
     private void doLogout() {
@@ -54,5 +64,10 @@ public class UserFragment extends Fragment {
     private void initViews(View v) {
         btnLogout= v.findViewById(R.id.frg_userbtn_logOut);
         btnEditar =v.findViewById(R.id.frg_user_btn_edit);
+
+        Usuario= v.findViewById(R.id.frg_user_tView_userName);
+        Userrname = v.findViewById(R.id.frg_user_name_tviem);
+        Email = v.findViewById(R.id.frg_user_email_tView);
+
     }
 }
