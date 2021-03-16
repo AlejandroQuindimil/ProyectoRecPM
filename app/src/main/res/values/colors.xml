@@ -20,4 +20,5 @@
     <color name="Colortext">#70FF88</color>
     <color name="ColorTextBtn">#000000</color>
     <color name="Color_main_background">#FFFFFF</color>
+    <color name="btnLogout">#FF1100</color>
 </resources>
