@@ -33,4 +33,5 @@
     <string name="imgn_home" />
     <string name="btnLogout">Cerrar sesion</string>
     <string name="txt_contentDescription" />
+    <string name="txtRpass">Repite contraseña</string>
 </resources>

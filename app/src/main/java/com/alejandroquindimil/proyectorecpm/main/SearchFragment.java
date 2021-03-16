@@ -28,7 +28,8 @@ public class SearchFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_search, container, false);
 
         initData(v);
-        return v;}
+        return v;
+    }
 
 
 
