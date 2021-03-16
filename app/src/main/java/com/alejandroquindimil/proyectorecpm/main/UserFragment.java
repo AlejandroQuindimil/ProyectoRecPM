@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class UserFragment extends Fragment {
     
     private Button btnLogout,btnEditar;
-    private EditText Usuario, Username, Email;
+    private EditText Username, Email;
 
     private FirebaseAuth mAuth;
 
@@ -68,9 +68,8 @@ public class UserFragment extends Fragment {
         btnLogout= v.findViewById(R.id.frg_userbtn_logOut);
         btnEditar =v.findViewById(R.id.frg_user_btn_edit);
 
-        Usuario= v.findViewById(R.id.frg_user_tView_userName);
-        Username = v.findViewById(R.id.frg_user_name_tviem);
-        Email = v.findViewById(R.id.frg_user_email_tView);
+        Username = v.findViewById(R.id.frg_user_txt_name);
+        Email = v.findViewById(R.id.frg_user_txt_correo);
 
 
 

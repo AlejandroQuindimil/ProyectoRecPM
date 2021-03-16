@@ -59,33 +59,23 @@
             app:layout_constraintStart_toStartOf="@+id/frg_user_imgName_lin"
             app:layout_constraintTop_toBottomOf="@+id/frg_user_imgName_lin">
 
-            <TextView
-                android:id="@+id/frg_user_tView_userName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="@string/User_name"
-                android:textAlignment="center"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/frg_user_name_tviem"
+            <EditText
+                android:id="@+id/frg_user_txt_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
+                android:ems="10"
                 android:hint="@string/User_name"
-                android:textSize="18sp" />
+                android:inputType="textPersonName"
+                android:autofillHints="" />
 
-            <TextView
-                android:id="@+id/frg_user_email_tView"
+            <EditText
+                android:id="@+id/frg_user_txt_correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
+                android:ems="10"
                 android:hint="@string/text_email"
-                android:textAlignment="viewStart"
-                android:textSize="18sp" />
+                android:inputType="textPersonName"
+                android:autofillHints="" />
 
         </LinearLayout>
 
