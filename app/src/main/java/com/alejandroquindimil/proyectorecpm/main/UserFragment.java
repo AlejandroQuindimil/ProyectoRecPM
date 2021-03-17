@@ -66,11 +66,11 @@ public class UserFragment extends BaseFrg {
                 });
 
         View v = inflater.inflate(R.layout.fragment_user, container, false);
-
-        getUserProfile();
-        saveProfile();
         initViews(v);
         initListeners();
+        getUserProfile();
+        saveProfile();
+
 
         return v;
     }
