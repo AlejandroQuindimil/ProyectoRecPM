@@ -3,6 +3,7 @@ package com.alejandroquindimil.proyectorecpm.login;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,12 +14,21 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.alejandroquindimil.proyectorecpm.Controller.DbController;
 import com.alejandroquindimil.proyectorecpm.MainActivity;
 import com.alejandroquindimil.proyectorecpm.R;
+import com.alejandroquindimil.proyectorecpm.listeners.DbListener;
+import com.alejandroquindimil.proyectorecpm.modelos.UserProfile;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.Map;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -27,6 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button BtnRegister,BtnLogin;
     private ProgressBar progressbar;
     private FirebaseAuth mAuth;
+    private Activity act;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +115,7 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
 
+
                             Toast.makeText(getApplicationContext(),
                                     "Registro con exito", Toast.LENGTH_LONG).show();
 
@@ -123,6 +135,7 @@ public class RegisterActivity extends AppCompatActivity {
                 });
 
         }
+
 
 
     }
