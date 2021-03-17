@@ -36,4 +36,7 @@
     <string name="txtRpass">Repite contraseña</string>
     <string name="error_profile_not_exist">Usuario no existe</string>
     <string name="sharedpreferences_file">ficheroConfiguracion</string>
+    <string name="txt_phone">Telefono</string>
+    <string name="txtDireccion">Direccion</string>
+    <string name="txt_btn_recuperar">Mostrar</string>
 </resources>

@@ -43,7 +43,7 @@
             <ImageView
                 android:id="@+id/frg_user_img_user"
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="60dp"
                 android:contentDescription="@string/Img_user"
                 android:src="@drawable/usuario__1_" />
 
@@ -63,42 +63,80 @@
                 android:id="@+id/frg_user_txt_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/User_name"
-                android:inputType="textPersonName"
-                android:autofillHints="" />
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/frg_user_txt_correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/text_email"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/frg_user_txt_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/txt_phone"
+                android:inputType="textPersonName"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/frg_user_txt_direcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/txtDireccion"
                 android:inputType="textPersonName"
                 android:autofillHints="" />
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/frg_user_btn_edit"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="256dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/frg_user_btn_edit"
-            android:textColor="@color/ColorTextBtn"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="@+id/frg_user_info_lin"
-            app:layout_constraintTop_toBottomOf="@+id/frg_user_info_lin" />
+            app:layout_constraintStart_toStartOf="@+id/frg_user_info_lin"
+            app:layout_constraintTop_toBottomOf="@+id/frg_user_info_lin">
+
+            <Button
+                android:id="@+id/frg_user_btn_edit"
+                style="@android:style/Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/frg_user_btn_edit"
+                android:textColor="@color/ColorTextBtn" />
+
+            <Button
+                android:id="@+id/frg_user_btn_mostrar"
+                style="@android:style/Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:text="@string/txt_btn_recuperar" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/frg_userbtn_logOut"
+            style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="188dp"
             android:backgroundTint="@color/btnLogout"
             android:text="@string/btnLogout"
             android:textColor="@color/ColorTextBtn"
-            app:layout_constraintEnd_toEndOf="@+id/frg_user_btn_edit"
-            app:layout_constraintTop_toBottomOf="@+id/frg_user_btn_edit" />
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
