@@ -46,9 +46,6 @@ public class UserFragment extends Fragment {
         mAuth= FirebaseAuth.getInstance();
 
         Map<String, Object> user = new HashMap<>();
-        user.put("Prueba", "");
-        user.put("Prueba2", "");
-
 
         db.collection("users").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
@@ -84,12 +81,13 @@ public class UserFragment extends Fragment {
         });
         btnMostar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { sendProfile();
+            public void onClick(View view) { saveProfile();
             }
         });
     }
 
-    private void sendProfile() {
+    private void saveProfile() {
+
     }
 
     private void editProfile() {
