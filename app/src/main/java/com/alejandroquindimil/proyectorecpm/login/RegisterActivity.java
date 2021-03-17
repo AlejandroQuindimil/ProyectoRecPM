@@ -90,21 +90,25 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         if (TextUtils.isEmpty(user)){
-            Toast.makeText(getApplicationContext(), "Introduce nombre", Toast.LENGTH_SHORT).show();
+            String errorMsg = getString(R.string.error_user_empty);
+            userName.setError(errorMsg);
             return;
         }
 
         if (TextUtils.isEmpty(email)){
-            Toast.makeText(getApplicationContext(), "Introduce Email", Toast.LENGTH_SHORT).show();
+            String errorMsg = getString(R.string.error_email_empty);
+            emailTextView.setError(errorMsg);
             return;
         }
         if (TextUtils.isEmpty(password)){
-            Toast.makeText(getApplicationContext(), "Introduce Contraseña", Toast.LENGTH_SHORT).show();
+            String errorMsg = getString(R.string.error_pass_empty);
+            paswordTextView.setError(errorMsg);
             return;
         }
 
         if (!password.equals(confirm)){
-            Toast.makeText(getApplicationContext(), "La contraseña no coincide", Toast.LENGTH_SHORT).show();
+            String errorMsg = getString(R.string.error_confirm_not_equals);
+            repeatpassextView.setError(errorMsg);
             return;
         }
 
@@ -115,19 +119,14 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
 
-
-                            Toast.makeText(getApplicationContext(),
-                                    "Registro con exito", Toast.LENGTH_LONG).show();
-
-                            progressbar.setVisibility(View.GONE);
+                           // progressbar.setVisibility(View.GONE);
 
                             Intent intent= new Intent(RegisterActivity.this, MainActivity.class);
                             startActivity(intent);
 
                         }else {
-                            Toast.makeText(getApplicationContext(),
-                                    "Fallo al registrar", Toast.LENGTH_LONG).show();
-                            progressbar.setVisibility(View.GONE);
+                            String errorMsg= getString(R.string.error_singin);
+                            userName.setError(errorMsg);
                         }
 
 

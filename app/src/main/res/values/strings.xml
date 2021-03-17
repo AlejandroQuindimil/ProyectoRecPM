@@ -41,4 +41,9 @@
     <string name="txt_btn_recuperar">Mostrar</string>
     <string name="txt_haveAcount">Tienes una cuenta?</string>
     <string name="btn_registrarse">Restrarse</string>
+    <string name="error_pass_empty">Contraseña Requerida</string>
+    <string name="error_email_empty">Correo Requerido</string>
+    <string name="error_confirm_not_equals">Contraseñas no coinciden</string>
+    <string name="error_user_empty">Nombre requerido</string>
+    <string name="error_singin">Erro al inciar sesion</string>
 </resources>

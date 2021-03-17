@@ -71,18 +71,14 @@ public class LoginActivity extends AppCompatActivity {
         password = passwordTextView.getText().toString();
 
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(),
-                    "Introduce Email",
-                    Toast.LENGTH_LONG)
-                    .show();
+            String errorMsg = getString(R.string.error_email_empty);
+            emailTextView.setError(errorMsg);
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(),
-                    "Introduce Contraseña",
-                    Toast.LENGTH_LONG)
-                    .show();
+            String errorMsg = getString(R.string.error_pass_empty);
+            passwordTextView.setError(errorMsg);
             return;
         }
 
@@ -94,28 +90,16 @@ public class LoginActivity extends AppCompatActivity {
                                     @NonNull Task<AuthResult> task)
                             {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(),
-                                            "Iniciando",
-                                            Toast.LENGTH_LONG)
-                                            .show();
 
-                                    // hide the progress bar
-                                    progressbar.setVisibility(View.GONE);
-
-                                    Intent intent
-                                            = new Intent(LoginActivity.this,
+                                    //progressbar.setVisibility(View.GONE);
+                                    Intent intent = new Intent(LoginActivity.this,
                                             MainActivity.class);
                                     startActivity(intent);
                                 }
 
                                 else {
-
-                                    Toast.makeText(getApplicationContext(),
-                                            "Error",
-                                            Toast.LENGTH_LONG)
-                                            .show();
-
-                                    progressbar.setVisibility(View.GONE);
+                                    String errorMsg= getString(R.string.error_singin);
+                                    emailTextView.setError(errorMsg);
                                 }
                             }
                         });
