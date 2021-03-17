@@ -13,9 +13,12 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.alejandroquindimil.proyectorecpm.Controller.BaseFrg;
 import com.alejandroquindimil.proyectorecpm.Controller.DbController;
 import com.alejandroquindimil.proyectorecpm.R;
+import com.alejandroquindimil.proyectorecpm.listeners.DbListener;
 import com.alejandroquindimil.proyectorecpm.login.RegisterActivity;
+import com.alejandroquindimil.proyectorecpm.modelos.UserProfile;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,13 +31,15 @@ import java.util.Map;
 
 import static android.content.ContentValues.TAG;
 
-public class UserFragment extends Fragment {
+public class UserFragment extends BaseFrg {
     
     private Button btnLogout,btnEditar, btnMostar;
     private EditText Username, Email , Phone, Direccion;
+    private EditText edtName, edtEmail;
 
     private FirebaseAuth mAuth;
-
+    private UserProfile currentProfile;
+    private DbController dbCtrl;
 
     FirebaseFirestore db= FirebaseFirestore.getInstance();
 
@@ -62,9 +67,11 @@ public class UserFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_user, container, false);
 
+        getUserProfile();
+        saveProfile();
         initViews(v);
         initListeners();
-        
+
         return v;
     }
 
@@ -81,12 +88,64 @@ public class UserFragment extends Fragment {
         });
         btnMostar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { saveProfile();
+            public void onClick(View view) {
             }
         });
     }
 
     private void saveProfile() {
+        String name= Username.getText().toString().trim();
+        String email= Email.getText().toString().trim();
+
+        UserProfile profile = new UserProfile();
+        profile.setName(name);
+        profile.setEmail(email);
+
+
+        showLoading(true);
+        hideKeyb();
+        dbCtrl.saveProfile(profile, new DbListener() {
+            @Override
+            public void isOk(UserProfile profile) {
+                String msg = getString(R.string.request_save_profile_ok);
+                showInfo(msg);
+                showLoading(false);
+            }
+
+            @Override
+            public void isKo(String error) {
+                showLoading(false);
+                showError(error);
+            }
+        });
+
+    }
+
+
+    private void getUserProfile() {
+        showLoading(true);
+        dbCtrl.getUserProfile(new DbListener() {
+            @Override
+            public void isOk(UserProfile profile) {
+                showLoading(false);
+                currentProfile = profile;
+                updateProfile();
+            }
+
+            @Override
+            public void isKo(String error) {
+                showLoading(false);
+                Log.e("Settings", error);
+            }
+        });
+    }
+
+    private void updateProfile() {
+        if (currentProfile == null){
+            return;
+        }
+        Username.setText(currentProfile.getName());
+        Email.setText(currentProfile.getEmail());
 
     }
 

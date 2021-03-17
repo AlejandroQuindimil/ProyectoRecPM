@@ -1,6 +1,5 @@
 package com.alejandroquindimil.proyectorecpm.Controller;
 
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -13,7 +12,6 @@ import com.alejandroquindimil.proyectorecpm.listeners.DbListener;
 import com.alejandroquindimil.proyectorecpm.modelos.UserProfile;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -25,14 +23,15 @@ import com.google.firebase.firestore.SetOptions;
 
 import java.util.Map;
 
-public class DbController {
+public class DbControler {
+
     private static final String USERS_COLLECTION = "users";
 
     private FirebaseFirestore db;
-    Activity act;
+    private Activity act;
     private FirebaseAuth mAuth;
 
-    DbController(){
+    private void DbController(){
         db = FirebaseFirestore.getInstance();
     }
     private static DbController instance;
@@ -46,7 +45,7 @@ public class DbController {
         return instance;
     }
 
-    protected void getAuth() {
+    private void getAuth() {
         mAuth = AuthController.init(act).getAuth();
     }
 
@@ -121,5 +120,7 @@ public class DbController {
 
     }
 
-
+    private void updateProfile(FirebaseUser user, UserProfile profile, DbListener listener){
+        //.collection("users").where("uid", "==", payload.uid)
+    }
 }

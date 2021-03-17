@@ -46,4 +46,5 @@
     <string name="error_confirm_not_equals">Contraseñas no coinciden</string>
     <string name="error_user_empty">Nombre requerido</string>
     <string name="error_singin">Erro al inciar sesion</string>
+    <string name="request_save_profile_ok">Perfil guardado</string>
 </resources>
