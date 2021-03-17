@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +36,7 @@ public class UserFragment extends Fragment {
     private FirebaseAuth mAuth;
 
 
-
+    FirebaseFirestore db= FirebaseFirestore.getInstance();
 
     SharedPreferences sharedPreferences;
 
@@ -43,10 +44,10 @@ public class UserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mAuth= FirebaseAuth.getInstance();
-        FirebaseFirestore db= FirebaseFirestore.getInstance();
+
         Map<String, Object> user = new HashMap<>();
-        user.put("Nombre", "");
-        user.put("Email", "");
+        user.put("Prueba", "");
+        user.put("Prueba2", "");
 
 
         db.collection("users").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -87,6 +88,11 @@ public class UserFragment extends Fragment {
     }
 
     private void editProfile() {
+        Map<String, Object> data = new HashMap<>();
+        data.put("Name", Username.getText().toString());
+        data.put("Email", Email.getText().toString());
+    db.collection("users").document()
+            .set(data, SetOptions.merge());
 
     }
 
