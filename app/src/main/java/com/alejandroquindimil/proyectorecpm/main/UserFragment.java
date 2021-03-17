@@ -30,8 +30,8 @@ import static android.content.ContentValues.TAG;
 
 public class UserFragment extends Fragment {
     
-    private Button btnLogout,btnEditar;
-    private EditText Username, Email;
+    private Button btnLogout,btnEditar, btnMostar;
+    private EditText Username, Email , Phone, Direccion;
 
     private FirebaseAuth mAuth;
 
@@ -74,23 +74,31 @@ public class UserFragment extends Fragment {
     private void initListeners() {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                doLogout();
+            public void onClick(View view) { doLogout();
             }
         });
         btnEditar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                editProfile();
+            public void onClick(View view) { editProfile();
             }
         });
+        btnMostar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { sendProfile();
+            }
+        });
+    }
+
+    private void sendProfile() {
     }
 
     private void editProfile() {
         Map<String, Object> data = new HashMap<>();
         data.put("Name", Username.getText().toString());
         data.put("Email", Email.getText().toString());
+        data.put("Telefono", Phone.getText().toString());
+        data.put("Direccion", Direccion.getText().toString());
+        
     db.collection("users").document()
             .set(data, SetOptions.merge());
 
@@ -106,11 +114,12 @@ public class UserFragment extends Fragment {
     private void initViews(View v) {
         btnLogout= v.findViewById(R.id.frg_userbtn_logOut);
         btnEditar =v.findViewById(R.id.frg_user_btn_edit);
-
+        btnMostar=v.findViewById(R.id.frg_user_btn_mostrar);
+        
         Username = v.findViewById(R.id.frg_user_txt_name);
         Email = v.findViewById(R.id.frg_user_txt_correo);
-
-
+        Phone = v.findViewById(R.id.frg_user_txt_telefono);
+        Direccion = v.findViewById(R.id.frg_user_txt_direcion);
     }
 
 
