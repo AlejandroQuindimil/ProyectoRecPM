@@ -10,22 +10,22 @@
     <LinearLayout
 
         android:id="@+id/act_login_lnlayoutV"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".login.LoginActivity">
 
         <!-- TextView for heading -->
+
+        <!-- Edit text for email -->
+
+        <!-- Edit text for password -->
         <TextView
             android:id="@+id/act_login_txtLogin"
             android:layout_width="match_parent"
@@ -38,9 +38,6 @@
             android:textSize="36sp"
             android:textStyle="bold" />
 
-        <!-- Edit text for email -->
-
-        <!-- Edit text for password -->
         <EditText
             android:id="@+id/act_login_editTextEmail"
             android:layout_width="match_parent"
@@ -92,9 +89,11 @@
 
             <Button
                 android:id="@+id/btn_register_act_login"
+                style="@style/Widget.AppCompat.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/color_inicia_sesion"
                 android:text="@string/btn_register"
                 android:textColor="@color/ColorTextBtn" />
         </LinearLayout>

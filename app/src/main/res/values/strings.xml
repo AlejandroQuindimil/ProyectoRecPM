@@ -39,4 +39,6 @@
     <string name="txt_phone">Telefono</string>
     <string name="txtDireccion">Direccion</string>
     <string name="txt_btn_recuperar">Mostrar</string>
+    <string name="txt_haveAcount">Tienes una cuenta?</string>
+    <string name="btn_registrarse">Restrarse</string>
 </resources>
