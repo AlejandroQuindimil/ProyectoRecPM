@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -18,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.FirebaseUserMetadata;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -25,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button Btniniciar, Btnregistar;
     private ProgressBar progressbar;
     private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +66,12 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    public void irAMain() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     private void loginUserAccount() {
 
         progressbar.setVisibility(View.VISIBLE);
@@ -86,18 +96,22 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnCompleteListener(
                         new OnCompleteListener<AuthResult>() {
                             @Override
-                            public void onComplete(
-                                    @NonNull Task<AuthResult> task)
-                            {
+                            public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    currentUser = mAuth.getCurrentUser();
+                                    String disp = currentUser.getDisplayName();
+                                    String email = currentUser.getEmail();
+                                    FirebaseUserMetadata meta = currentUser.getMetadata();
 
-                                    //progressbar.setVisibility(View.GONE);
-                                    Intent intent = new Intent(LoginActivity.this,
-                                            MainActivity.class);
-                                    startActivity(intent);
-                                }
+                                    String phone = currentUser.getPhoneNumber();
+                                    String uid = currentUser.getUid();
+                                    Log.d("USER", currentUser.getUid());
+                                    irAMain();
 
-                                else {
+
+                                } else {
+                                    Exception ex = task.getException();
+                                    ex.printStackTrace();
                                     String errorMsg= getString(R.string.error_singin);
                                     emailTextView.setError(errorMsg);
                                 }

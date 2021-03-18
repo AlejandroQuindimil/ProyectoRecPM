@@ -32,7 +32,7 @@ public class DbController {
     Activity act;
     private FirebaseAuth mAuth;
 
-    DbController(){
+    private DbController(){
         db = FirebaseFirestore.getInstance();
     }
     private static DbController instance;

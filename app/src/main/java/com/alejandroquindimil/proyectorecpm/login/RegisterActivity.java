@@ -8,12 +8,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.alejandroquindimil.proyectorecpm.Controller.AuthController;
 import com.alejandroquindimil.proyectorecpm.Controller.DbController;
 import com.alejandroquindimil.proyectorecpm.MainActivity;
 import com.alejandroquindimil.proyectorecpm.R;
@@ -26,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.FirebaseUserMetadata;
 import com.google.firebase.firestore.SetOptions;
 
 import java.util.Map;
@@ -37,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button BtnRegister,BtnLogin;
     private ProgressBar progressbar;
     private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
     private Activity act;
 
     @Override
@@ -77,6 +81,11 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void irAMain() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     private void registerNewUser() {
         progressbar.setVisibility(View.VISIBLE);
@@ -113,6 +122,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
 
+
         mAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -120,11 +130,19 @@ public class RegisterActivity extends AppCompatActivity {
                         if(task.isSuccessful()) {
 
                            // progressbar.setVisibility(View.GONE);
+                            currentUser = mAuth.getCurrentUser();
+                            String disp = currentUser.getDisplayName();
+                            String email = currentUser.getEmail();
+                            FirebaseUserMetadata meta = currentUser.getMetadata();
+                            String phone = currentUser.getPhoneNumber();
+                            String uid = currentUser.getUid();
+                            Log.d("USER", currentUser.getUid());
+                            irAMain();
 
-                            Intent intent= new Intent(RegisterActivity.this, MainActivity.class);
-                            startActivity(intent);
 
                         }else {
+                            Exception ex = task.getException();
+                            ex.printStackTrace();
                             String errorMsg= getString(R.string.error_singin);
                             userName.setError(errorMsg);
                         }
@@ -132,7 +150,6 @@ public class RegisterActivity extends AppCompatActivity {
 
                     }
                 });
-
         }
 
 
