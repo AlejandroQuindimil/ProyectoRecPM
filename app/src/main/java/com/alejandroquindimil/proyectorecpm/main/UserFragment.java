@@ -58,8 +58,6 @@ public class UserFragment extends BaseFrg {
         getUserProfile();
 
 
-
-
         return v;
     }
 
