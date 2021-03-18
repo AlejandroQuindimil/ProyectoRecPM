@@ -70,7 +70,7 @@ public class UserFragment extends BaseFrg {
         btnEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //saveProfile();
             }
         });
         btnMostar.setOnClickListener(new View.OnClickListener() {
@@ -135,18 +135,6 @@ public class UserFragment extends BaseFrg {
         Email.setText(currentProfile.getEmail());
 
     }
-
-   /* private void editProfile() {
-        Map<String, Object> data = new HashMap<>();
-        data.put("Name", Username.getText().toString());
-        data.put("Email", Email.getText().toString());
-        data.put("Telefono", Phone.getText().toString());
-        data.put("Direccion", Direccion.getText().toString());
-        
-    db.collection("users").document()
-            .set(data, SetOptions.merge());
-
-    }*/
 
     private void doLogout() {
         

@@ -1,6 +1,5 @@
 package com.alejandroquindimil.proyectorecpm.Controller;
 
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -26,7 +25,7 @@ import com.google.firebase.firestore.SetOptions;
 import java.util.Map;
 
 public class DbController {
-    private static final String USERS_COLLECTION = "Users";
+    private static final String USERS_COLLECTION = "users";
 
     private FirebaseFirestore db;
     private Activity act;
@@ -120,6 +119,5 @@ public class DbController {
         editor.commit();
 
     }
-
 
 }
