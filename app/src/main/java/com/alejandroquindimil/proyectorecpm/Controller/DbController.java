@@ -26,10 +26,10 @@ import com.google.firebase.firestore.SetOptions;
 import java.util.Map;
 
 public class DbController {
-    private static final String USERS_COLLECTION = "users";
+    private static final String USERS_COLLECTION = "Users";
 
     private FirebaseFirestore db;
-    Activity act;
+    private Activity act;
     private FirebaseAuth mAuth;
 
     private DbController(){
@@ -46,7 +46,7 @@ public class DbController {
         return instance;
     }
 
-    protected void getAuth() {
+    private void getAuth() {
         mAuth = AuthController.init(act).getAuth();
     }
 

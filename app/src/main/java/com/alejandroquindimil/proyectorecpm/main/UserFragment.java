@@ -41,7 +41,7 @@ public class UserFragment extends BaseFrg {
     private UserProfile currentProfile;
     private DbController dbCtrl;
 
-    FirebaseFirestore db= FirebaseFirestore.getInstance();
+    //FirebaseFirestore db= FirebaseFirestore.getInstance();
 
     SharedPreferences sharedPreferences;
 
@@ -50,26 +50,13 @@ public class UserFragment extends BaseFrg {
                              Bundle savedInstanceState) {
         mAuth= FirebaseAuth.getInstance();
 
-        Map<String, Object> user = new HashMap<>();
-
-        db.collection("users").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-            }
-        })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
-                    }
-                });
 
         View v = inflater.inflate(R.layout.fragment_user, container, false);
         initViews(v);
         dbCtrl = DbController.init(getActivity());
         initListeners();
         getUserProfile();
+
 
 
 
@@ -84,7 +71,8 @@ public class UserFragment extends BaseFrg {
         });
         btnEditar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { editProfile();
+            public void onClick(View view) {
+
             }
         });
         btnMostar.setOnClickListener(new View.OnClickListener() {
@@ -150,7 +138,7 @@ public class UserFragment extends BaseFrg {
 
     }
 
-    private void editProfile() {
+   /* private void editProfile() {
         Map<String, Object> data = new HashMap<>();
         data.put("Name", Username.getText().toString());
         data.put("Email", Email.getText().toString());
@@ -160,7 +148,7 @@ public class UserFragment extends BaseFrg {
     db.collection("users").document()
             .set(data, SetOptions.merge());
 
-    }
+    }*/
 
     private void doLogout() {
         
